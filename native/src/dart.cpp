@@ -130,7 +130,7 @@ void Version(Dart_NativeArguments arguments) {
   Dart_ExitScope();
 }
 
-void finalize_statement(void __unused *isolate_callback_data, __unused Dart_WeakPersistentHandle handle, void *peer) {
+void finalize_statement(void *isolate_callback_data, Dart_WeakPersistentHandle handle, void *peer) {
   static bool warned = false;
   auto *statement = (StatementPeer *) peer;
   sqlite3_finalize(statement->stmt());

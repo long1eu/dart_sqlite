@@ -3,22 +3,34 @@ project(sqlite)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(FLAGS "-Wall -undefined dynamic_lookup")
+IF(APPLE)
+    set(FLAGS "-Wall -undefined dynamic_lookup")
+ENDIF()
+
 set(CMAKE_CXX_FLAGS "${FLAGS}")
 set(EXECUTABLE_OUTPUT_PATH "../lib")
 
-include_directories(../lib/**.h)
-include_directories(/usr/local/opt/dart/libexec/include)
 include_directories(/third_party/**.c)
 include_directories(/third_party/**.h)
 add_compile_definitions(DART_SHARED_LIB=1)
 
-add_library(sqlite SHARED
-        src/dart.cpp
+set(SOURCE_FILES src/dart.cpp
         src/dart.h
         third_party/sqlite-amalgamation-3290000/sqlite3.c
         third_party/sqlite-amalgamation-3290000/sqlite3.h)
 
-set_target_properties(sqlite
-        PROPERTIES
-        LIBRARY_OUTPUT_DIRECTORY "../../lib/src/")
+add_library(sqlite SHARED ${SOURCE_FILES})
+
+IF(WIN32)
+    include_directories("C:\\tools\\Dart-64\\dart-sdk\\include")
+    target_link_libraries(sqlite "C:\\tools\\Dart-32\\dart-sdk\\bin\\dart.lib")
+    set_target_properties(sqlite
+            PROPERTIES
+            RUNTIME_OUTPUT_DIRECTORY "..\\..\\lib\\src")
+ELSEIF(APPLE)
+    include_directories(/usr/local/opt/dart/libexec/include)
+    set_target_properties(sqlite
+            PROPERTIES
+            LIBRARY_OUTPUT_DIRECTORY "../../lib/src/")
+ENDIF()
+

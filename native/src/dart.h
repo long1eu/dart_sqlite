@@ -4,10 +4,10 @@
 
 #pragma once
 
-#include <dart_api.h>
 #include <string>
 #include <iostream>
 #include <stdio.h>
+#include <dart_api.h>
 #include "../third_party/sqlite-amalgamation-3290000/sqlite3.h"
 
 using namespace std;
