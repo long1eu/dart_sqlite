@@ -5,6 +5,8 @@
 #pragma once
 
 #include <string>
+#include <string.h>
+#include <utility>
 #include <iostream>
 #include <stdio.h>
 #include <dart_api.h>
