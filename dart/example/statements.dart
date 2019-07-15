@@ -5,7 +5,7 @@
 import 'package:dart_sqlite/dart_sqlite.dart';
 
 Future<void> _runSimpleQuery(Database db) async {
-  Row row = await db.query('SELECT ?+16, UPPER(?)', [2000, 'Ligue 1']).first;
+  Row row = await db.query('SELECT ?+19, UPPER(?)', [2000, 'Ligue 1']).first;
   final int year = row[0];
   final String league = row[1];
   print('-- $league $year --');
