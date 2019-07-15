@@ -9,7 +9,7 @@ IF (APPLE)
 ENDIF ()
 
 if (${CMAKE_VERSION} VERSION_LESS "3.14")
-    add_definitions(DART_SHARED_LIB=1)
+    add_definitions(DART_SHARED_LIB)
 elseif ()
     add_compile_definitions(DART_SHARED_LIB=1)
 endif ()
