@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.5.1)
 project(sqlite)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -7,6 +7,10 @@ IF (APPLE)
     set(FLAGS "-Wall -undefined dynamic_lookup")
     set(CMAKE_CXX_FLAGS "${FLAGS}")
 ENDIF ()
+
+if (${CMAKE_VERSION} VERSION_LESS "3.14")
+    add_definitions(DART_SHARED_LIB=1)
+endif ()
 
 add_compile_definitions(DART_SHARED_LIB=1)
 set(SOURCE_FILES src/dart.cpp

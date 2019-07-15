@@ -12,6 +12,7 @@ sudo apt-get install dart
 git clone https://github.com/long1eu/dart_sqlite
 cd dart_sqlite
 mkdir build && cd build
+sudo apt-get upgrade cmake
 cmake ..
 make
 cd ../dart
