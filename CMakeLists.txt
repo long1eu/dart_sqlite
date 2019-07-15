@@ -5,15 +5,17 @@ set(CMAKE_CXX_STANDARD 14)
 
 IF (APPLE)
     set(FLAGS "-Wall -undefined dynamic_lookup")
-    set(CMAKE_CXX_FLAGS "${FLAGS}")
 ENDIF ()
 
 if (${CMAKE_VERSION} VERSION_LESS "3.14")
-    add_definitions(DART_SHARED_LIB)
+    IF (CMAKE_SIZEOF_VOID_P MATCHES "8")
+        set(FLAGS "-DDART_SHARED_LIB")
+    ENDIF ()
 elseif ()
     add_compile_definitions(DART_SHARED_LIB=1)
 endif ()
 
+set(CMAKE_CXX_FLAGS "${FLAGS}")
 set(SOURCE_FILES src/dart.cpp
         src/dart.h
         third_party/sqlite-amalgamation-3290000/sqlite3.c
