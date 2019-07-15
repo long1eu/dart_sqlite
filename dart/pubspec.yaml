@@ -8,5 +8,6 @@ dependencies:
   http: any
   path: any
   yaml: any
+  rxdart: any
 dev_dependencies:
   test: any
