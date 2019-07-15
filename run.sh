@@ -1,8 +1,4 @@
-This library provides sqlite bindings for Dart VM.
-
-**Linux run guide**
-
-```
+#!/bin/sh
 sudo apt-get update
 sudo apt-get install git curl build-essential apt-transport-https
 sudo sh -c 'curl https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -'
@@ -17,6 +13,3 @@ make
 cd ../dart
 /usr/lib/dart/bin/pub get
 /usr/lib/dart/bin/dart example/statements.dart
-```
-
-or just run the `run.sh`
