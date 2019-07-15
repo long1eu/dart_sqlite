@@ -10,9 +10,10 @@ ENDIF ()
 
 if (${CMAKE_VERSION} VERSION_LESS "3.14")
     add_definitions(DART_SHARED_LIB=1)
+elseif ()
+    add_compile_definitions(DART_SHARED_LIB=1)
 endif ()
 
-add_compile_definitions(DART_SHARED_LIB=1)
 set(SOURCE_FILES src/dart.cpp
         src/dart.h
         third_party/sqlite-amalgamation-3290000/sqlite3.c
