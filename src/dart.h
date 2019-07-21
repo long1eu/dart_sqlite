@@ -7,25 +7,26 @@
 #include <string>
 #include <string.h>
 #include <utility>
+#include <memory>
 #include <iostream>
 #include <stdio.h>
 #include <dart_api.h>
 #include "../third_party/sqlite-amalgamation-3290000/sqlite3.h"
+#include "StatementPeer.h"
+#include "SqliteWrapper.h"
+#include "DartObjectInstantiator.h"
 
-using namespace std;
+static std::unique_ptr<SqliteWrapper> sqlite_wrapper;
 
-#define EXPORT(func, args) if (!strcmp(#func, cname) && argc == args) { return func; }
-
+/**
+ * Called when the library is loaded and it initialize Dart methods bindings between Dart
+ * native functions and C++ functions.
+ */
 DART_EXPORT Dart_Handle sqlite_Init(Dart_Handle parent_library);
 
+/**
+ * This function is used to map a name/arity to a Dart_NativeFunction. It returns a valid
+ * Dart_NativeFunction which resolves to a native dart entry point for the native dart
+ * function.
+ */
 Dart_NativeFunction ResolveName(Dart_Handle name, int num_of_arguments, bool *auto_setup_scope);
-
-void New(Dart_NativeArguments arguments);
-void Close(Dart_NativeArguments arguments);
-void Version(Dart_NativeArguments arguments);
-void PrepareStatement(Dart_NativeArguments arguments);
-void CloseStatement(Dart_NativeArguments arguments);
-void Reset(Dart_NativeArguments arguments);
-void Bind(Dart_NativeArguments arguments);
-void ColumnInfo(Dart_NativeArguments arguments);
-void Step(Dart_NativeArguments arguments);

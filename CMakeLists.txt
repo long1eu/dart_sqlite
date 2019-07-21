@@ -18,6 +18,11 @@ endif ()
 set(CMAKE_CXX_FLAGS "${FLAGS}")
 set(SOURCE_FILES src/dart.cpp
         src/dart.h
+        src/StatementPeer.h
+        src/DartObjectInstantiator.cpp
+        src/DartObjectInstantiator.h
+        src/SqliteWrapper.cpp
+        src/SqliteWrapper.h
         third_party/sqlite-amalgamation-3290000/sqlite3.c
         third_party/sqlite-amalgamation-3290000/sqlite3.h)
 
