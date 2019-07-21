@@ -77,30 +77,29 @@ Who's the best now?
 2. The project reads data from a file and process the data, or the program writes data to a file.
     
     * [./src/SqliteWrapper.cpp:14](https://github.com/long1eu/dart_sqlite/blob/master/src/SqliteWrapper.cpp#L14)
-    * [./src/SqliteWrapper.cpp:204](https://github.com/long1eu/dart_sqlite/blob/master/src/SqliteWrapper.cpp#L204)
     * [./src/SqliteWrapper.cpp:235](https://github.com/long1eu/dart_sqlite/blob/master/src/SqliteWrapper.cpp#L235)
     
 3. The project uses Object Oriented Programming techniques.
 
     * [./src/SqliteWrapper.h:23](https://github.com/long1eu/dart_sqlite/blob/master/src/SqliteWrapper.h#L23)
     * [./src/SqliteWrapper.h:31](https://github.com/long1eu/dart_sqlite/blob/master/src/SqliteWrapper.h#L31)
-    * [./src/SqliteWrapper.h:52](https://github.com/long1eu/dart_sqlite/blob/master/src/SqliteWrapper.h#L52)
+    * [./src/SqliteWrapper.h:50](https://github.com/long1eu/dart_sqlite/blob/master/src/SqliteWrapper.h#L50)
     
 4. Classes use appropriate access specifiers for class members.
     
-    * [./src/DartObjectInstantiator.cpp:13](https://github.com/long1eu/dart_sqlite/blob/master/src/DartObjectInstantiator.cpp#L13)
-    * [./src/DartObjectInstantiator.cpp:45](https://github.com/long1eu/dart_sqlite/blob/master/src/DartObjectInstantiator.cpp#L45)
+    * [./src/DartObjectInstantiator.h:13](https://github.com/long1eu/dart_sqlite/blob/master/src/DartObjectInstantiator.h#L13)
+    * [./src/DartObjectInstantiator.h:28](https://github.com/long1eu/dart_sqlite/blob/master/src/DartObjectInstantiator.h#L28)
     
 5. Class constructors utilize member initialization lists.
     
-    * [./src/StatementPeer.h:12](https://github.com/long1eu/dart_sqlite/blob/master/src/DartObjectInstantiator.h#L12)
-    * [./src/SqliteWrapper.h:26](https://github.com/long1eu/dart_sqlite/blob/master/src/SqliteWrapper.h#L26)     
+    * [./src/StatementPeer.h:12](https://github.com/long1eu/dart_sqlite/blob/master/src/StatementPeer.h#L12)
+    * [./src/SqliteWrapper.h:24](https://github.com/long1eu/dart_sqlite/blob/master/src/SqliteWrapper.h#L24)     
          
     
 6. Classes abstract implementation details from their interfaces.
 
-    * [./src/dart.h:23](https://github.com/long1eu/dart_sqlite/blob/master/src/dart.h#L23)     
-    * [./src/dart.h:29](https://github.com/long1eu/dart_sqlite/blob/master/src/dart.h#L29)     
+    * [./src/dart.h:21](https://github.com/long1eu/dart_sqlite/blob/master/src/dart.h#L21)     
+    * [./src/dart.h:27](https://github.com/long1eu/dart_sqlite/blob/master/src/dart.h#L27)     
     
 7. Classes encapsulate behavior.
 
@@ -115,7 +114,7 @@ Who's the best now?
     * [./src/DartObjectInstantiator.h:23](https://github.com/long1eu/dart_sqlite/blob/master/src/DartObjectInstantiator.h#L23)
     
 9. The project makes use of references in function declarations.
-
+    
     * [./src/DartObjectInstantiator.h:19](https://github.com/long1eu/dart_sqlite/blob/master/src/DartObjectInstantiator.h#L19)
     * [./src/DartObjectInstantiator.h:23](https://github.com/long1eu/dart_sqlite/blob/master/src/DartObjectInstantiator.h#L23)
     
