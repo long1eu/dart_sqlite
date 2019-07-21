@@ -5,6 +5,7 @@
 #pragma once
 
 #include <iostream>
+#include <string>
 #include <dart_api.h>
 #include "../third_party/sqlite-amalgamation-3290000/sqlite3.h"
 #include "StatementPeer.h"

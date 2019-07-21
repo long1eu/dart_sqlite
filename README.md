@@ -81,9 +81,9 @@ Who's the best now?
     
 3. The project uses Object Oriented Programming techniques.
 
-    * [./src/SqliteWrapper.h:23](https://github.com/long1eu/dart_sqlite/blob/master/src/SqliteWrapper.h#L23)
-    * [./src/SqliteWrapper.h:31](https://github.com/long1eu/dart_sqlite/blob/master/src/SqliteWrapper.h#L31)
-    * [./src/SqliteWrapper.h:50](https://github.com/long1eu/dart_sqlite/blob/master/src/SqliteWrapper.h#L50)
+    * [./src/SqliteWrapper.h:24](https://github.com/long1eu/dart_sqlite/blob/master/src/SqliteWrapper.h#L24)
+    * [./src/SqliteWrapper.h:32](https://github.com/long1eu/dart_sqlite/blob/master/src/SqliteWrapper.h#L32)
+    * [./src/SqliteWrapper.h:51](https://github.com/long1eu/dart_sqlite/blob/master/src/SqliteWrapper.h#L51)
     
 4. Classes use appropriate access specifiers for class members.
     
@@ -93,7 +93,7 @@ Who's the best now?
 5. Class constructors utilize member initialization lists.
     
     * [./src/StatementPeer.h:12](https://github.com/long1eu/dart_sqlite/blob/master/src/StatementPeer.h#L12)
-    * [./src/SqliteWrapper.h:24](https://github.com/long1eu/dart_sqlite/blob/master/src/SqliteWrapper.h#L24)     
+    * [./src/SqliteWrapper.h:25](https://github.com/long1eu/dart_sqlite/blob/master/src/SqliteWrapper.h#L25)     
          
     
 6. Classes abstract implementation details from their interfaces.
