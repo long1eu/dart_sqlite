@@ -5,18 +5,18 @@
 #pragma once
 
 #include <iostream>
-#include <string>
+#include <cstring>
 #include <dart_api.h>
 #include "../third_party/sqlite-amalgamation-3290000/sqlite3.h"
 #include "StatementPeer.h"
 #include "DartObjectInstantiator.h"
 
 #ifdef _WIN32
-#define __unused [[maybe_unused]];
+#define __unused [[maybe_unused]]
 #endif
 
 #ifdef __linux__
-#define __unused __attribute__((unused));
+#define __unused  __attribute__((unused))
 #endif
 
 class SqliteWrapper {
