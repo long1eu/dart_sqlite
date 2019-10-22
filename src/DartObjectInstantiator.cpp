@@ -38,12 +38,8 @@ Dart_Handle DartObjectInstantiator::InstantiateLibraryObject(const std::string &
 }
 
 const Dart_Handle DartObjectInstantiator::library() {
-  // We lazy initialize this so we don't delay the startup
-  if (library_ == nullptr || !Dart_IsLibrary(Dart_HandleFromPersistent(library_))) {
-    library_ =
-        Dart_NewPersistentHandle(Dart_LookupLibrary(Dart_NewStringFromCString("package:dart_sqlite/src/sqlite.dart")));
-  }
-
+  library_ =
+      Dart_NewPersistentHandle(Dart_LookupLibrary(Dart_NewStringFromCString("package:dart_sqlite/src/sqlite.dart")));
   return Dart_HandleFromPersistent(library_);
 }
 
